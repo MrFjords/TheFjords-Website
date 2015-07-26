@@ -1,0 +1,180 @@
+// BASE CSS
+html,
+body {
+  font-size: 100%; }
+
+body {
+  background: $color-background;
+  color: $color-font;
+  font: {
+  	family: $font-family;
+  	weight: normal;
+  	style: normal;
+  }
+  line-height: 1.4;
+  position: relative;
+  cursor: default; }
+
+a:hover {
+  cursor: pointer; }
+
+img,
+object,
+embed {
+  max-width: 100%;
+  height: auto; }
+
+object,
+embed {
+  height: 100%; }
+
+img {
+  -ms-interpolation-mode: bicubic; 
+  display: inline-block;
+  vertical-align: middle; }
+
+textarea {
+  height: auto;
+  min-height: pxToEm(50px); }
+
+select {
+  width: 100%; }
+
+a {
+  color: $link-color-normal;
+  text-decoration: none;
+  border-bottom: 1px solid $link-color-normal;
+  line-height: inherit; }
+  a:hover, a:focus {
+    color: $link-color-hover; 
+    border-color: $link-color-hover;
+	border-style: solid; }
+  a img {
+    border: none; }
+
+p {
+  font-family: inherit;
+  font-weight: normal;
+  line-height: 1.4;
+  margin-bottom: pxToEm($gutter-size);
+  text-rendering: optimizeLegibility; }
+  p aside {
+    font-size: pxToEm(14px);
+    line-height: 1.35;
+    font-style: italic; }
+
+h1, h2, h3, h4, h5, h6 {
+  font: {
+  	family: $font-family-alt;
+  	weight: 300;
+  	style: normal;
+  }
+  color: $color-heading;
+  text-rendering: optimizeLegibility;
+  line-height: 1.2; }
+  h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+    font-size: 60%;
+    color: $dark-grey;
+    line-height: 0; }
+
+h1 {
+  font-size: pxToEm(34px);
+  margin-bottom: pxToEm($gutter-size, 34px);
+}
+h2 {
+  font-size: pxToEm(27px);
+  margin-bottom: pxToEm($gutter-size, 27px);
+}
+
+h3 {
+  font-size: pxToEm(24px);
+  margin-bottom: pxToEm($gutter-size, 24px);
+}
+
+h4 {
+  font-size: pxToEm(21px);
+  margin-bottom: pxToEm($gutter-size, 21px);
+}
+
+h5 {
+  font-size: pxToEm(18px);
+  margin-bottom: pxToEm($gutter-size, 18px);
+}
+
+h6 {
+  font-size: pxToEm(16px);
+  margin-bottom: pxToEm($gutter-size, 16px);
+}
+
+hr {
+  border: solid $grey;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: pxToEm($gutter-size) 0;
+  height: 0; }
+
+em,
+i {
+  font-style: italic;
+  line-height: inherit; }
+
+strong,
+b {
+  font-weight: bold;
+  line-height: inherit; }
+
+small {
+  font-size: 60%;
+  line-height: inherit; }
+
+code {
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  font-weight: bold;
+  color: #bb260d; }
+
+ul,
+ol,
+dl {
+  line-height: 1.4;
+  margin-bottom: pxToEm($gutter-size);
+  list-style-position: outside;
+  font-family: inherit; }
+
+ul {
+  margin-left: pxToEm($gutter-size); }
+  ul.no-bullet {
+    margin-left: 0; }
+    ul.no-bullet li ul,
+    ul.no-bullet li ol {
+      margin-left: pxToEm($gutter-size);
+      margin-bottom: 0;
+      list-style: none; }
+
+ul li ul,
+ul li ol {
+  margin-left: pxToEm($gutter-size);
+  margin-bottom: 0;
+  /* Override nested font-size change */ }
+ul.square li ul, ul.circle li ul, ul.disc li ul {
+  list-style: inherit; }
+ul.square {
+  list-style-type: square;
+  margin-left: pxToEm($gutter-size); }
+ul.circle {
+  list-style-type: circle;
+  margin-left: pxToEm($gutter-size); }
+ul.disc {
+  list-style-type: disc;
+  margin-left: pxToEm($gutter-size); }
+ul.no-bullet {
+  list-style: none; }
+
+ol {
+  margin-left: pxToEm($gutter-size); }
+  ol li ul,
+  ol li ol {
+    margin-left: pxToEm($gutter-size);
+    margin-bottom: 0; }
+ol li {
+	list-style: decimal;
+}

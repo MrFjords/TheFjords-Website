@@ -1,0 +1,56 @@
+.profiles {
+	width: 100%;
+	max-width: pxToEm(300px);
+	margin: 0 auto pxToEm($gutter-size);
+	font-family: $font-family-alt;
+	text-align: center;
+	@include media-support( $breakpoint-470 ){
+		 max-width: pxToEm(750px);
+	}
+}
+.profile { 
+	width: 100%;
+	margin: pxToEm($gutter-size) auto; 
+	color: $red;
+	@include media-support( $breakpoint-470 ){
+		width: 33%; 
+		padding: 0 pxToEm($gutter-size); 
+		float: left;
+	}
+}
+.profile-image {
+	& > img {
+		width: pxToEm(150px);
+		height: auto;
+		float: left;
+		box-shadow: 0 0 0 3px $white, 0 0 0 4px $grey;
+		border-radius: 50%;
+		background-color: $white;
+		overflow: hidden;
+		-moz-background-clip: padding;
+	    -webkit-background-clip: padding;
+	    background-clip: padding-box;
+		@extend %grayscale;
+		@include media-support( $breakpoint-470 ){
+			float: none;
+		}
+	}
+}
+.profile-details { 
+	padding: pxToEm($gutter-size) 0 0 pxToEm($gutter-size); 
+	float: right;
+}
+.profile-image, .profile-details {
+	width: 50%;
+	@include media-support( $breakpoint-470 ){
+		width: 100%;
+		float: left;
+	}
+}
+.profile-name, .profile-role, .profile-link { margin: 0; }
+.profile-name { font-size: pxToEm(22px); }
+.profile-role { font-size: pxToEm(18px); }
+.profile-link {
+	& > a, & > a:hover, & > a:active, & > a:focus { border: none; }
+	& > a:hover, & > a:active, & > a:focus { text-decoration: underline; }
+}

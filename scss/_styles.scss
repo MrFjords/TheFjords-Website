@@ -1,0 +1,87 @@
+@import "variables", "functions";
+
+$breakpoint-320: pxToEm(320px);
+$breakpoint-470: pxToEm(470px);
+$breakpoint-475: pxToEm(475px);
+$breakpoint-600: pxToEm(600px);
+$breakpoint-725: pxToEm(725px);
+$breakpoint-800: pxToEm(800px);
+$breakpoint-900: pxToEm(900px);
+
+@import "reset", "base";
+
+%grayscale {
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+	filter: grayscale(100%);
+	filter: url(../grayscale.svg#greyscale);
+	filter: gray;
+	-webkit-filter: grayscale(1);
+	&:hover, &:focus {
+		-webkit-filter: none; -moz-filter: none;
+		-ms-filter: none; -o-filter: none;
+		filter: none;
+	}
+}
+
+.wrapper {
+	max-width: pxToEm($width-wrapper);
+	margin-left: auto;
+	margin-right: auto;
+	padding: pxToEm($gutter-size);
+}
+
+.lead {
+	// font-family: $font-family-alt;
+	line-height: 1.4;
+	@include media-support( $breakpoint-470 ){
+		font-size: 110%;
+	}
+	@include media-support( $breakpoint-725 ){
+		font-size: 120%;
+	}
+}
+
+.header-section {
+	text-align: center;
+	font-size: pxToEm(34px);
+	margin-bottom: pxToEm($gutter-size, 34px);
+	line-height: 1.0;
+	@include media-support( $breakpoint-600 ){
+		font-size: pxToEm(52px);
+		margin-bottom: pxToEm($gutter-size, 52px);
+	}
+}
+
+.grey-background {
+	background: #f2f2f2 url(../img/noise.png) repeat 0 0;
+}
+
+@import "content/header";
+@import "content/profiles";
+@import "content/events";
+@import "content/albums";
+@import "content/gallery";
+@import "content/footer";
+
+.social-icon {
+	display: inline-block;
+	width: pxToEm(24px);
+	text-align: center;
+	font-size: pxToEm(21px);
+	line-height: 0.75;
+	vertical-align: -15%;
+}
+
+.fixed-nav-link {
+	position: absolute;
+	top: -44px;
+	@media( min-width: pxToEm(600px) ){
+		top: -60px;
+	}
+}
+
+@import "display-helpers";
+

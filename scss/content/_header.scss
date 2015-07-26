@@ -1,0 +1,216 @@
+//HEADER
+.header {
+	width: 100%;
+	position: relative;
+	font-family: $font-family-alt;
+	z-index: 50;
+}
+
+.link-menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 55;
+	margin: pxToEm(10px, 18px) 0 0 pxToEm(10px, 18px);
+	border-bottom: none;
+	font-size: pxToEm(18px);
+	font-weight: 600;
+	color: $color-nav;
+	i {
+		padding-right: pxToEm(5px, 18px);
+		vertical-align: -5%;
+	}
+	@include media-support( $breakpoint-600 ){
+		display: none;
+	}
+}
+
+.logo {
+	width: 100%;
+	position: fixed;
+	text-align: center;
+	height: pxToEm(44px);
+	border-bottom: 1px solid darken($white, 10%);
+	margin: 0 0 pxToEm($gutter-size);
+	background-color: $white;
+	background-color: rgba($white, 0.95);
+	z-index: 40;
+	@include media-support( $breakpoint-600 ){
+		margin-bottom: 0;
+	}
+	a {
+		position: absolute;
+		top: pxToEm(-5px);
+		display: inline-block;
+		margin-left: pxToEm(-30px);
+		width: pxToEm(60px);
+		height:	pxToEm(60px);
+		background-color: $white;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-image: url(../img/icon/boot-60.png);
+		border-bottom: none;
+		border-radius: 50%;
+		z-index: 40;
+		@include support-retina {
+			background-image: url(../img/icon/boot-60_2x.png);
+			@include background-size(pxToEm(60px), pxToEm(60px));
+		}
+		@include media-support( $breakpoint-600 ){
+			top: pxToEm(-15px);
+			width: pxToEm(80px);
+			height:	pxToEm(80px);
+			background-image: url(../img/icon/boot-80.png);
+			margin-left: pxToEm(-40px);
+		}
+		@include media-support-retina( $breakpoint-600 ) {
+			background-image: url(../img/icon/boot-80_2x.png);
+			@include background-size(pxToEm(80px), pxToEm(80px));
+		}
+	}
+}
+
+.site-title {
+	text-align: center;
+	margin: pxToEm(60px, 42px) 0 pxToEm(15px, 42px);
+	font-size: pxToEm(42px);
+	font-weight: 700;
+	color: $color-heading;
+	@include media-support( $breakpoint-600 ){
+		position: relative; 
+		margin-top: 0;
+		top: 30%;
+		font-size:  pxToEm(80px);
+		color: $white;
+		text-shadow: 1px 1px 1px $black, -1px -1px 2px $color-heading;
+	}
+	@include media-support( $breakpoint-900 ){
+		font-size: pxToEm(100px);
+	}
+}
+
+//MAIN NAV
+.nav-main {
+	max-width: pxToEm(320px);
+	margin: 0 auto pxToEm($gutter-size);
+	padding: 0 pxToEm($gutter-size);
+	text-align: center;
+	z-index: 30;
+	@include media-support( $breakpoint-470 ){
+		max-width: none;
+		border-radius: 0;
+	}
+	@include media-support( $breakpoint-600 ){
+		position: absolute;
+		top: 0;
+		width: 100%;
+		padding: 0;
+		pointer-events: none;
+	}
+}
+
+.nav-main-menu {
+	margin: 0;
+	border-radius: pxToEm(4px);
+	background-color: $color-nav;
+	@include media-support( $breakpoint-470 ){
+		max-width: none;
+		padding: 0;
+	}
+	@include media-support( $breakpoint-600 ){
+		text-align: center;
+		background-color: transparent;
+		max-width: pxToEm($width-content);	
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.nav-main-item {
+	border-top: 1px solid $dark-grey;
+	border-bottom: 1px solid $white;
+	@include media-support( $breakpoint-470 ){
+		display: inline-block;
+		border: none;
+	}
+	@include media-support( $breakpoint-600 ){
+		display: inline-block;
+		width: 14%;
+		border: none;
+		pointer-events: auto;
+	}
+	&:first-child { border-top: none; }
+	&:last-child { border-bottom: none; }
+	& > a {
+		display: block;
+		padding: pxToEm(10px, 18px);
+		border: none;
+		color: $white;
+		text-decoration: none;
+		font-size: pxToEm(18px);
+		@include media-support( $breakpoint-600 ) {
+			color: $color-nav;
+			padding: pxToEm(7px, 20px) pxToEm(10px, 20px);
+			font-size: pxToEm(20px);
+		}
+		@include media-support( $breakpoint-725 ) {
+			font-size: pxToEm(22px);
+			font-weight: 600;
+		}
+		&:hover, &:active, &:visited {
+			border: none; color: white;
+			@include media-support( $breakpoint-600 ){
+				color: $color-nav;
+			}
+		}
+	}
+	
+}
+
+.left-of-logo {
+	@include media-support( $breakpoint-600 ){
+		margin-right: pxToEm(50px);
+		margin-right: 6%
+	}
+}
+.right-of-logo {
+	@include media-support( $breakpoint-600 ){
+		margin-left: pxToEm(50px);
+		margin-left: 6%
+	}
+}
+
+.hero {
+	@include media-support( $breakpoint-600 ){
+		position: relative;
+		margin: pxToEm(44px) 0 pxToEm(30px);
+		height: 0;
+		padding: 0 0 30%;
+		background: transparent url(../img/hero.jpg) no-repeat 0 0; 
+		background-size: 100% auto;
+	}
+}
+
+.hero-filter {
+	@include media-support( $breakpoint-600 ){
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba($color-nav, 0.7) url(../img/noise.png) repeat 0 0;
+		@if $no-mq-support {
+			background: transparent url(../img/noise-red.png) repeat 0 0;
+		}
+	}
+}
+
+.fixed-top {
+	@include media-support( $breakpoint-600 ){
+		width: 100%;
+		top: 0;
+		left: 0;
+		position: fixed;
+		z-index: 50;
+	}
+}

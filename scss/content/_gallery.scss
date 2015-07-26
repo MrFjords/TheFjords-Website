@@ -1,0 +1,22 @@
+.gallery {
+	margin: 0 auto;
+	a, a:hover, a:active, a:visited { border: none; }
+}
+
+.gallery-img {
+	width: pxToEm(75px);
+	height: auto;
+	padding: pxToEm(2px);
+	margin: pxToEm(5px);
+	border: 1px solid $grey;
+	border-radius: pxToEm($border-radius);
+	background-color: $white;
+	@extend %grayscale;
+	@include media-support( $breakpoint-470 ) { 
+		width: pxToEm(100px); 
+		padding: pxToEm(5px); 
+	}
+	@include media-support( $breakpoint-600 ) { 
+		width: pxToEm(125px); 
+	}
+}

@@ -1,0 +1,47 @@
+//HELPER CLASSES
+.relative {
+	position: relative;
+}
+
+.pull-left {
+  float: left !important; }
+
+.pull-right {
+  float: right !important; }
+
+.text-left {
+  text-align: left !important; }
+
+.text-right {
+  text-align: right !important; }
+
+.text-center {
+  text-align: center !important; }
+
+.text-justify {
+  text-align: justify !important; }
+
+.hide {
+  display: none; }
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.clearfix {
+	&:before,
+	&:after {
+    	content: " "; /* 1 */
+    	display: table; /* 2 */
+	}
+	&:after {
+    	clear: both;
+	}
+}

@@ -1,0 +1,21 @@
+.events-news { 
+	@include media-support( $breakpoint-725 ){
+		width: 70%;
+		float: left;
+		padding-right: pxToEm($gutter-size);
+	}
+	@include media-support( $breakpoint-800 ){
+		width: 75%;
+	}
+}
+.events-shows { 
+	@include media-support( $breakpoint-725 ){
+		width: 30%;
+		float: left;
+		padding-left: pxToEm($gutter-size);
+		border-left: 1px solid $grey;
+	}
+	@include media-support( $breakpoint-800 ){
+		width: 25%;
+	}
+}

@@ -1,0 +1,14 @@
+//FOOTER
+.footer {
+	padding-top: pxToEm(30px);
+	background-color: $black;
+	background: $black url(../img/noise.png) repeat 0 0;
+	font-family: $font-family-alt;
+	color: $white;
+	a, a:hover, a:active, a:visited {
+		color: $white; border: none;
+	}
+	a:hover, a:active, a:visited {
+		text-decoration: underline;
+	}
+}
